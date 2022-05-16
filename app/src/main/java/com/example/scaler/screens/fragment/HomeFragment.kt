@@ -62,6 +62,7 @@ class HomeFragment : Fragment() {
     private fun setObservers(){
         videoViewModel.videoListLiveData.observe(viewLifecycleOwner) {
             if(it.videos!=null){
+                customAdapter?.clearItems()
                 customAdapter?.addItems(it.videos as MutableList<Any>)
 
             }
