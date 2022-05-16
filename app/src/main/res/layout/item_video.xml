@@ -89,7 +89,7 @@
                     android:textSize="@dimen/_11ssp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/poppins_medium"
-                    android:maxLines="2"
+                    android:maxLines="1"
                     android:ellipsize="end"
                     android:layout_marginTop="@dimen/_3sdp"
                     android:paddingStart="@dimen/_7sdp"
