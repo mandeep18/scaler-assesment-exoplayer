@@ -23,6 +23,7 @@ import com.example.scaler.R
 import com.example.scaler.constants.AppConstants
 import com.example.scaler.databinding.FragmentVideoDetailsBinding
 import com.example.scaler.extensions.hideShowActionBar
+import com.example.scaler.helper.LogHelper
 import com.example.scaler.listener.OnItemClickListener
 import com.example.scaler.model.VideoModel
 import com.example.scaler.network.BaseViewModelFactory
@@ -126,9 +127,15 @@ class VideoDetailsFragment : Fragment(){
 
 
     private val onItemClickListener : OnItemClickListener = object : OnItemClickListener {
-        override fun onItemClick(videoModel: VideoModel) {
+        override fun onItemClick(videoModel: VideoModel, clMainVideoView: ImageView?) {
             setUpExoPlayer(videoModel)
             AppController.databaseHelper?.updateVideoViewed(videoModel)
+            LogHelper.debug(TAG, "clMainVideoView-$clMainVideoView")
+            clMainVideoView?.visibility = View.VISIBLE
+//            if(context!=null)
+//                clMainVideoViewnVideoView?.setBackgroundColor(resources.getColor(R.color.gray_a6))
+            customAdapter?.notifyDataSetChanged()
+//            customAdapter?.notifyItemChanged()
         }
 
     }

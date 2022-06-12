@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -73,7 +75,7 @@ class HomeFragment : Fragment() {
     }
 
     private val onItemClickListener : OnItemClickListener = object : OnItemClickListener {
-        override fun onItemClick(videoModel: VideoModel) {
+        override fun onItemClick(videoModel: VideoModel, clMainVideoView: ImageView?) {
             showVideoDetailsFragment(videoModel)
             databaseHelper?.updateVideoViewed(videoModel)
         }

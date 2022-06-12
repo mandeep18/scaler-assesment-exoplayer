@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.scaler.AppController.Companion.databaseHelper
@@ -56,7 +58,7 @@ class HistoryFragment : Fragment() {
     }
 
     private val onItemClickListener : OnItemClickListener = object : OnItemClickListener {
-        override fun onItemClick(videoModel: VideoModel) {
+        override fun onItemClick(videoModel: VideoModel, clMainVideoView: ImageView?) {
             showToast("History Item-> ${videoModel.title}")
         }
 

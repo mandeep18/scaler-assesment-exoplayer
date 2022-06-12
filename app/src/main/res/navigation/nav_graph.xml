@@ -13,6 +13,7 @@
             android:id="@+id/action_home2_to_explore"
             app:destination="@id/history" />
     </fragment>
+
     <fragment
         android:id="@+id/history"
         android:name="com.example.scaler.screens.fragment.HistoryFragment"
