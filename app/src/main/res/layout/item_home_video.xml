@@ -15,9 +15,14 @@
         <variable
             name="clicklistener"
             type="com.example.scaler.listener.OnItemClickListener" />
+
+        <variable
+            name="clicklistener"
+            type="com.example.scaler.listener.OnItemClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainVideoView"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +30,7 @@
         android:clickable="true"
         android:focusable="true"
         android:background="@color/white"
-        android:onClick="@{()->clicklistener.onItemClick(model)}">
+        android:onClick="@{()->clicklistener.onItemClick(model,ivBannerIcon)}">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivBannerIcon"

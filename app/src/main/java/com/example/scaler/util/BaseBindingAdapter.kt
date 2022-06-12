@@ -1,6 +1,7 @@
 package com.example.scaler.util
 
 import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import com.example.scaler.R
 import com.example.scaler.constants.APIConstants
@@ -19,4 +20,9 @@ object BaseBindingAdapter {
     fun loadThumbnailImage(view: ImageView?, url: String?) {
         view?.loadImage(APIConstants.URL_IMAGE_PREFIX + url, R.drawable.ic_placeholder_image)
     }
+//    @BindingAdapter("changeBGColor")
+//    @JvmStatic
+//    fun loadThumbnailImage(clMainVideoView:ConstraintLayout) {
+//
+//    }
 }
