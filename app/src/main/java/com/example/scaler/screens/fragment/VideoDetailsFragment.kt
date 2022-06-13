@@ -65,7 +65,6 @@ class VideoDetailsFragment : Fragment(){
     var fullScreenMode = false
     private lateinit var videoViewModel: VideoViewModel
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _viewBinder = FragmentVideoDetailsBinding.inflate(inflater, container, false)
         return _viewBinder?.root
